@@ -15,8 +15,8 @@ function App() {
   console.log("En el componente App")
 
   const tasksComponents = mockedTasks.map(
-    task =>  <Task taskContent={task.content} done={task.done}/>
-)
+    task => <Task key={task.id} taskContent={task.content} done={task.done}/>
+  )
 
   return (
     <>
