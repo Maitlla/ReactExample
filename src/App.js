@@ -1,4 +1,4 @@
-import Tasks from "./components/Tasks/Tasks"
+import Task from "./components/Task/Task"
 
 import './App.css';
 
@@ -11,14 +11,18 @@ function App() {
 
   // Aquí podemos poner código
   // que se ejecutará cada vez
-  // que algo cambie en la pantalla
+  // que se redibuje el componente
   console.log("En el componente App")
+
+  const tasksComponents = mockedTasks.map(
+    task =>  <Task taskContent={task.content} done={task.done}/>
+)
 
   return (
     <>
       <h1>Mi aplicación de tareas</h1>
       <ol>
-          <Tasks tasksList={mockedTasks}/>
+          {tasksComponents}
       </ol>
     </>
   );
