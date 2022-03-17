@@ -13,5 +13,4 @@ const mockedTasks = [
     },
 ]
 
-
 export default mockedTasks
