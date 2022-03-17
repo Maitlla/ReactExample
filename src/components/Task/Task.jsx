@@ -1,4 +1,6 @@
-import { useState } from "react"
+import { useState } from "react";
+
+import "./Task.module.css";
 
 console.log("Antes del componente Task");
 
@@ -6,24 +8,31 @@ function Task ({taskContent, done}) {
 
     console.log("En el componente Task:", taskContent);
 
-    const [ completed, setCompleted ] = useState(done)
+    const [ completed, setCompleted ] = useState(done);
+    const [ taskDescription, setTaskDescription ] = useState(taskContent)
 
-    function toggleCompleted () {
-        setCompleted( ! completed )
+    function updateDescriptionHandler (ev) {
+        setTaskDescription(ev.target.value);
+    }
+
+    function toggleCheckboxHandler () {
+        setCompleted( ! completed );
     }
 
     return (
-        <>
-            <li>
-                {taskContent}
-                <input
-                    type="checkbox"
-                    checked={completed}
-                    onChange={toggleCompleted}
-                />
-            </li>
-        </>
-
+        <li>
+            <input
+                type="text" 
+                value={taskDescription}
+                onChange={updateDescriptionHandler}
+            />
+            <input
+                type="checkbox"
+                checked={completed}
+                onChange={toggleCheckboxHandler}
+                //onChange={()=>{setCompleted( ! completed )}}
+            />
+        </li>
     )
 }
 
