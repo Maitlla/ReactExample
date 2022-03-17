@@ -4,7 +4,7 @@ console.log("Antes del componente Task");
 
 function Task ({taskContent, done}) {
 
-    console.log("En el componente Task");
+    console.log("En el componente Task:", taskContent);
 
     const [ completed, setCompleted ] = useState(done)
 
