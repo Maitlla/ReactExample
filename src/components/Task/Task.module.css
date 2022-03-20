@@ -1,7 +1,7 @@
-input {
+.taskInput {
     border: none;
 }
 
-input:focus {
+.taskInput:focus {
     border: unset;
 }

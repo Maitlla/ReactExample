@@ -1,15 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import "./Task.module.css";
 
-console.log("Antes del componente Task");
+function Task ({taskObject, updateTask}) {
 
-function Task ({taskContent, done}) {
-
-    console.log("En el componente Task:", taskContent);
-
-    const [ completed, setCompleted ] = useState(done);
-    const [ taskDescription, setTaskDescription ] = useState(taskContent)
+    const [ completed, setCompleted ] = useState(taskObject.done);
+    const [ taskDescription, setTaskDescription ] = useState(taskObject.content)
 
     function updateDescriptionHandler (ev) {
         setTaskDescription(ev.target.value);
@@ -22,11 +18,13 @@ function Task ({taskContent, done}) {
     return (
         <li>
             <input
+                className="taskInput"
                 type="text" 
                 value={taskDescription}
                 onChange={updateDescriptionHandler}
             />
             <input
+                className="taskInput"
                 type="checkbox"
                 checked={completed}
                 onChange={toggleCheckboxHandler}
