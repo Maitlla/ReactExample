@@ -20,11 +20,12 @@ function Tasks ({tasksArray}) {
         setTasksState([newTask, ...tasksState])
     }
 
-    function updateTask (taskId, updatedTask) {
-        const taskArray = [ ...tasksState ];
-        const taskIdx = taskArray.findIndex( task => task.id === taskId );
-        taskArray[taskIdx] = updateTask;
-        setTasksState(taskArray);
+    function updateTask (taskId, updatedTaskObject) {
+        const currentTasksArray = [ ...tasksState ];
+        const taskIdx = currentTasksArray.findIndex( task => task.id === taskId );
+        currentTasksArray[taskIdx] = updatedTaskObject;
+        setTasksState(currentTasksArray);
+        console.log("Tasks state:", currentTasksArray );
     }
 
     let tasksComponents = tasksState.map(
