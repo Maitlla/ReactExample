@@ -48,6 +48,15 @@ function Task ({taskObject, updateTask}) {
         [done]
     )
 
+    useEffect(
+        ()=> {
+            return ()=>{
+                console.log("Cleaning delay on destroy.")
+                clearTimeout(runningDelay);
+            }
+        }
+    )
+
     return (
         <li>
             <input
