@@ -1,7 +1,22 @@
 # Introducción a React
  ¿Buscas la documentación original?. Está más abajo.
 
-## Creación de un proyecto de React básico
+## Instalación de este proyecto
+
+1. Clona el repositorio en local.
+```bash
+git clone git@github.com:Diseno-de-Aplicaciones-Web/ReactExample.git
+```
+2. Instala las dependencias.
+```bash
+cd ReactExample
+npm install
+```
+3. Inicia el servidor de desarrollo.
+```bash
+npm start
+```
+## Creación de un proyecto básico de React desde cero
 
 1. Creamos nuestro repositorio en GitHub (o similar).
 2. Clonamos en local, cuidando de que la capeta del proyecto no contenga mayusculas o espacios.
