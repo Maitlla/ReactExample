@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-import "./Task.module.css";
+import style from "./Task.module.css";
 
 function Task ({taskObject, updateTask}) {
 
@@ -51,14 +51,13 @@ function Task ({taskObject, updateTask}) {
     return (
         <li>
             <input
-                className="taskInput"
+                className={style.taskInput}
                 type="text" 
                 value={content}
                 onChange={changeContentHandler}
                 onBlur={updateThisTask}
             />
             <input
-                className="taskInput"
                 type="checkbox"
                 checked={done}
                 onChange={changeCheckboxHandler}
