@@ -7,18 +7,18 @@ body {
     grid-template-columns: 5fr 2fr;
     gap: 0.5rem;
     padding-top:0px;
-    background-color: rgb(241, 241, 241);
+    background-color: var(--color-fondo-basico);
 }
 
 .fondo {
-  background-color: white;
-  padding-top: 4%;
-  border-radius: 1rem;
+    background-color: var(--fondo-blanco);
+    border-radius: var(--border-radius);
+    padding-top: 4%;
 }
 
 * {
-
-    padding: 1.2rem;
+    padding: var(--padding-general);  
+    
 }
 
 .full-width {
@@ -39,40 +39,39 @@ body {
     min-width: 100px;
 }
 
-h1 {
-   
-    background-color: rgb(200, 233, 253);
-    height: 4vh;
-}
-
-nav {
-    background-color:rgb(241, 241, 241);
+header {
     border-radius: 1rem;
     height: 15vh;
-    background-image: url("./components/img/flores2.jpg");
+    background-image: url("../components/img/flores3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     /*background-position: center bottom; */
+    
 }
-
+/*
+nav {
+   
+    
+}
+*/
 main {
-    list-style: none !important;
     flex-grow: 3;
 }
 
 aside {
-    background-image: url("./components/img/flores3.jpg");
+    background-image: url("../components/img/flores4.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     /*background-position: center bottom; */
-  
+    border-radius: var(--border-radius);
     flex-grow: 1;
-    border-radius: 1rem;
+    
 }
 
 footer {
     background-color: rgb(200, 233, 253);
     height: 4vh;
+    border-radius: var(--border-radius);
 }

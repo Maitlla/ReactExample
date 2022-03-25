@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-import style from "./Task.module.css";
+import style from "../../styles/Task.module.css";
 
 function Task ({taskObject, updateTask}) {
 

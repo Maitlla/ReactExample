@@ -1,0 +1,12 @@
+.taskInput {
+    border: none;
+}
+
+.taskInput:focus {
+    border: unset;
+}
+
+ol {
+    list-style: none; /* quita los puntos o números de una lista */
+}
+
