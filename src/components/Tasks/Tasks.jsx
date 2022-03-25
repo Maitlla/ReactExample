@@ -34,9 +34,9 @@ function Tasks ({tasksArray}) {
 
     return (
         <>
-            <ol>
+            <ul>
                 {tasksComponents}
-            </ol>
+            </ul>
             <input type="text" onChange={newTaskContentHandler}/>
             <button onClick={addTask}>+</button>
         </>
