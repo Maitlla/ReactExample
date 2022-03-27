@@ -39,11 +39,7 @@ function Tasks({ tasksArray }) {
         <>
             <div className="flex-container">
                 <nav>
-                    <button onClick={addTask}>Añadir Tarea</button>
-                    <input type="text" onChange={newTaskContentHandler} />
-                    <button>Editar Tarea</button>
-                    <button>Borrar Tarea</button>
-                    <select class="seleccionar fuente" name="tipo" id="tipo">
+                    <select class="fuente red borde" name="tipo" id="tipo">
                         <option value="Tipo">Seleccionar</option>
                         <option value="Trabajo">Trabajo </option>
                         <option value="Estudios">Estudios</option>
@@ -52,16 +48,24 @@ function Tasks({ tasksArray }) {
                         <option value="Hogar">Hogar</option>
                         <option value="Otros">Otros</option>
                     </select>
-                    <input type="text" /> {/* para buscador */}
-                    <button>Buscar</button> {/* para buscador */}
+                    <button class="borde" onClick={addTask}>Añadir</button>
+                    <input class="borde" type="text" onChange={newTaskContentHandler} />
+                    {/* <button class="borde">Editar</button> */}
+                    <button class="borde">Borrar</button>
+                    <input class="borde buscar" type="text" value="Buscar" />{/* para buscador */} 
                 </nav>
                 <main>
-                    <p>Lista de tareas</p>
+                    <h2 class="LisTarea">Lista de tareas</h2>
                     <ol>
                         {tasksComponents}
                     </ol>
                 </main>
-                
+                <aside>
+                    <p>A Coruña</p>
+                    <p>12 : 02</p>
+                    <p>Lunes 28</p>
+                    <p>Marzo 2022</p>
+                </aside>
             </div>
 
         </>

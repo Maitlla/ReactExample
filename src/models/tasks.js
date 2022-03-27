@@ -10,6 +10,16 @@ const mockedTasks = [
         done: false,
     },
     {
+        id: 1647506514872,
+        content: "Mi tercera tarea",
+        done: true,
+    },
+    {
+        id: 1647506520473,
+        content: "Mi cuarta tarea",
+        done: false,
+    },
+    {
         id: 1647506515278,
         content: "Mi tarea final",
         done: true,

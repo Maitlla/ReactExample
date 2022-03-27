@@ -16,9 +16,7 @@ function App() {
         </header>
         <div className="flex-container">
           <Tasks tasksArray={mockedTasks}/>
-          <aside>
-            <p>A Coruña 12:02</p> 
-          </aside>
+
         </div>
         <footer className="full-width">
           <p>© Maite Llamas García</p>
